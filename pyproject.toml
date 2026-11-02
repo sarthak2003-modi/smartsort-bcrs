@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smartsort"
+version = "0.1.0"
+description = "SmartSort: AI vision + sensor fusion for Singapore BCRS return verification"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "NTU AI Literacy — SmartSort group" },
+]
+dependencies = [
+  "numpy>=1.24",
+  "Pillow>=10.0",
+]
+
+[project.optional-dependencies]
+torch = ["torch>=2.1", "torchvision>=0.16"]
+yolo = ["ultralytics>=8.1"]
+ocr = ["easyocr>=1.7", "pyzbar>=0.1.9", "pytesseract>=0.3.10"]
+demo = ["gradio>=4.0", "streamlit>=1.28"]
+dev = ["pytest>=7.4"]
+
+[tool.setuptools.packages.find]
+include = ["smartsort*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

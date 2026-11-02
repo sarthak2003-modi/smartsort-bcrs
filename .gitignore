@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+.env
+.python-version
+
+# Tests / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Data & weights (do not commit)
+data/raw/
+data/processed/
+data/yolo/images/
+data/yolo/labels/
+*.pt
+*.pth
+*.onnx
+*.tflite
+*.engine
+weights/
+artifacts/
+runs/
+wandb/
+
+# Keep placeholders
+!data/.gitkeep
+!data/yolo/.gitkeep
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Logs
+*.log
+oplog*.jsonl
+oplog*.csv
