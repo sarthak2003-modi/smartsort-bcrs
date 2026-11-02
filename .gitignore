@@ -46,3 +46,8 @@ wandb/
 *.log
 oplog*.jsonl
 oplog*.csv
+
+# Local git bundles / archives (never commit)
+*.bundle
+*.bundle.zip
+data/yolo/data.yaml

@@ -6,7 +6,9 @@ Drawn from the SmartSort NTU AI Literacy final deck (Honest Scope + Responsible 
 
 **What this prototype does not do yet**
 
-- Trained on a small, self-collected image set — real deployment needs far more
+- The live trial uses a **hosted vision-language model as a stand-in**, not a
+  fine-tuned on-device classifier. Training a classifier on a small, self-collected
+  image set is the **intended next step** — real deployment will need far more
   data across lighting, angles and container wear.
 - No live load-cell or NIR sensor in the trial; the app takes a **manual weight
   entry** instead.
@@ -20,7 +22,8 @@ Drawn from the SmartSort NTU AI Literacy final deck (Honest Scope + Responsible 
 - Deposit marks stay printed and legible even on worn or crumpled containers.
 - Camera framing and chute lighting stay reasonably consistent in the field.
 - Operators review held items rather than discarding them outright.
-- Observed fraud mostly resembles the contaminant categories we trained on.
+- Observed fraud is assumed to resemble the contaminant categories a future
+  self-collected training set would cover; that has not been validated at scale.
 
 ## Responsible AI
 

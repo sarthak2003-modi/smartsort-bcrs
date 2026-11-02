@@ -1,6 +1,6 @@
 # Speaker 2 script · Slides 4–5 (System design & computer vision)
 
-**Target: 2–2.5 minutes** · Sarthak "Conti" Modi
+**Target: 2–2.5 minutes** · Sarthak Modi
 
 ---
 

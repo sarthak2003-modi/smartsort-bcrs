@@ -76,9 +76,11 @@ The team's deployed browser trial:
 
 Class IDs, empty-container weight bands (PET 8–70 g, can 10–25 g), manual weight
 entry, and the category-then-verdict flow were read from the live `/trial` UI
-(January/November 2026 snapshot via curl). Live vision uses a server-side model
-(`zenmux` / `z-ai/glm-4.6v-flash-free` when configured); this Python repo provides
-the **offline / trainable** counterpart with mocked or torchvision classifiers.
+(January/November 2026 snapshot via curl). The **live trial app uses a hosted
+vision-language model as a stand-in** for on-device vision (`zenmux` /
+`z-ai/glm-4.6v-flash-free` when configured). This Python repo is the **offline /
+trainable** counterpart with mocked or torchvision classifiers — it does not call
+that hosted model.
 
 ---
 
@@ -88,6 +90,7 @@ the **offline / trainable** counterpart with mocked or torchvision classifiers.
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+pip install -e .   # so `python scripts/...` can import the smartsort package
 
 # Unit tests (mocked classifier — no GPU / weights needed)
 pytest -q

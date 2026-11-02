@@ -3,6 +3,14 @@
 
 from __future__ import annotations
 
+# Allow running as `python scripts/...` or `python app/...` without editable install.
+import sys
+from pathlib import Path as _BootstrapPath
+
+_ROOT = _BootstrapPath(__file__).resolve().parents[1]
+if str(_ROOT) not in sys.path:
+    sys.path.insert(0, str(_ROOT))
+
 import argparse
 import json
 from pathlib import Path
