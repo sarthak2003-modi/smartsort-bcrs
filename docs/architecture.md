@@ -5,6 +5,17 @@ Beverage Container Return Scheme (BCRS). It sits inside a Return Right reverse
 vending machine (RVM) chute and verifies an item **before** the 10¢ refund is
 released.
 
+## Live demo
+
+Try the hosted trial bay (vision-language model stand-in + manual weight):
+
+- **Trial bay:** https://temporary-express-oasis-aafsrpj.vercel.app/trial
+- **Operator log:** https://temporary-express-oasis-aafsrpj.vercel.app/log
+- **Site root:** https://temporary-express-oasis-aafsrpj.vercel.app
+
+This Python package mirrors the same category-then-weight flow for offline
+training, evaluation, and edge-export experiments.
+
 ## Four-step pipeline
 
 ```mermaid
@@ -38,9 +49,10 @@ Browser / Gradio / CLI  →  evaluate_return(image, weight_g)
                               └─ OperatorLog (JSONL / CSV)
 ```
 
-The public trial bay (`temporary-express-oasis-aafsrpj.vercel.app/trial`) follows
-the same category-then-weight flow. This Python package mirrors that logic for
-offline training, evaluation, and edge-export experiments.
+The public trial bay
+([/trial](https://temporary-express-oasis-aafsrpj.vercel.app/trial),
+[/log](https://temporary-express-oasis-aafsrpj.vercel.app/log)) follows the same
+category-then-weight flow. See **Live demo** above.
 
 ## Edge deployment sketch
 

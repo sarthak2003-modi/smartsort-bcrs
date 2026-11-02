@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="720" viewBox="0 0 900 720" role="img"
+     aria-label="evaluate_return decision logic flowchart">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0B1F33"/>
+      <stop offset="100%" stop-color="#102A43"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="720" rx="16" fill="url(#bg3)"/>
+  <text x="450" y="36" text-anchor="middle" font-family="Helvetica, Arial, DejaVu Sans, sans-serif"
+        font-size="15" font-weight="600" fill="#94A3B8" letter-spacing="1.5">evaluate_return · DECISION LOGIC</text>
+  <text x="450" y="56" text-anchor="middle" font-family="Helvetica, Arial, DejaVu Sans, sans-serif"
+        font-size="11" fill="#64748B">Illustrative thresholds · CONF_MIN / ACCEPT_MIN uncalibrated</text>
+
+  <!-- Start -->
+  <rect x="300" y="74" width="300" height="44" rx="22" fill="#134E4A" stroke="#14B8A6" stroke-width="2"/>
+  <text x="450" y="102" text-anchor="middle" font-family="Helvetica, Arial, DejaVu Sans, sans-serif"
+        font-size="15" font-weight="700" fill="#ECFDF5">classify(image) → category, cv_conf</text>
+
+  <line x1="450" y1="118" x2="450" y2="142" stroke="#475569" stroke-width="2"/>
+
+  <!-- Diamond 1 CONF_MIN -->
+  <polygon points="450,142 560,182 450,222 340,182" fill="#1E3A5F" stroke="#38BDF8" stroke-width="2"/>
+  <text x="450" y="178" text-anchor="middle" font-family="Helvetica, Arial, DejaVu Sans, sans-serif"
+        font-size="13" font-weight="700" fill="#E0F2FE">cv_conf ≥ CONF_MIN?</text>
+  <text x="450" y="196" text-anchor="middle" font-family="Helvetica, Arial, DejaVu Sans, sans-serif"
+        font-size="11" fill="#7DD3FC">(0.55)</text>
+
+  <!-- No -> HOLD low conf -->
+  <path d="M340 182 L180 182 L180 210" fill="none" stroke="#D97706" stroke-width="2"/>
+  <text x="250" y="174" font-family="Helvetica, Arial, DejaVu Sans, sans-serif" font-size="11" fill="#FBBF24">no</text>
+  <rect x="70" y="210" width="220" height="40" rx="8" fill="#78350F" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="180" y="235" text-anchor="middle" font-family="Helvetica, Arial, DejaVu Sans, sans-serif"
+        font-size="12" font-weight="600" fill="#FDE68A">HOLD · low vision confidence</text>
+
+  <!-- Yes down -->
+  <line x1="450" y1="222" x2="450" y2="250" stroke="#475569" stroke-width="2"/>
+  <text x="468" y="240" font-family="Helvetica, Arial, DejaVu Sans, sans-serif" font-size="11" fill="#5EEAD4">yes</text>
+
+  <!-- Diamond 2 eligible -->
+  <polygon points="450,250 580,295 450,340 320,295" fill="#1E3A5F" stroke="#38BDF8" stroke-width="2"/>
+  <text x="450" y="292" text-anchor="middle" font-family="Helvetica, Arial, DejaVu Sans, sans-serif"
+        font-size="13" font-weight="700" fill="#E0F2FE">eligible category?</text>
+  <text x="450" y="310" text-anchor="middle" font-family="Helvetica, Arial, DejaVu Sans, sans-serif"
+        font-size="11" fill="#7DD3FC">PET / aluminium</text>
+
+  <path d="M320 295 L180 295 L180 330" fill="none" stroke="#D97706" stroke-width="2"/>
+  <text x="240" y="288" font-family="Helvetica, Arial, DejaVu Sans, sans-serif" font-size="11" fill="#FBBF24">no</text>
+  <rect x="70" y="330" width="220" height="40" rx="8" fill="#78350F" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="180" y="355" text-anchor="middle" font-family="Helvetica, Arial, DejaVu Sans, sans-serif"
+        font-size="12" font-weight="600" fill="#FDE68A">HOLD · ineligible: category</text>
+
+  <line x1="450" y1="340" x2="450" y2="368" stroke="#475569" stroke-width="2"/>
+  <text x="468" y="358" font-family="Helvetica, Arial, DejaVu Sans, sans-serif" font-size="11" fill="#5EEAD4">yes</text>
+
+  <!-- Diamond 3 weight band -->
+  <polygon points="450,368 580,413 450,458 320,413" fill="#1E3A5F" stroke="#38BDF8" stroke-width="2"/>
+  <text x="450" y="408" text-anchor="middle" font-family="Helvetica, Arial, DejaVu Sans, sans-serif"
+        font-size="13" font-weight="700" fill="#E0F2FE">weight in band?</text>
+  <text x="450" y="426" text-anchor="middle" font-family="Helvetica, Arial, DejaVu Sans, sans-serif"
+        font-size="11" fill="#7DD3FC">PET 8–70 g · can 10–25 g</text>
+
+  <path d="M320 413 L180 413 L180 448" fill="none" stroke="#D97706" stroke-width="2"/>
+  <text x="240" y="406" font-family="Helvetica, Arial, DejaVu Sans, sans-serif" font-size="11" fill="#FBBF24">no</text>
+  <rect x="70" y="448" width="220" height="40" rx="8" fill="#78350F" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="180" y="473" text-anchor="middle" font-family="Helvetica, Arial, DejaVu Sans, sans-serif"
+        font-size="12" font-weight="600" fill="#FDE68A">HOLD · weight mismatch</text>
+
+  <line x1="450" y1="458" x2="450" y2="486" stroke="#475569" stroke-width="2"/>
+  <text x="468" y="476" font-family="Helvetica, Arial, DejaVu Sans, sans-serif" font-size="11" fill="#5EEAD4">yes</text>
+
+  <!-- Fuse box -->
+  <rect x="300" y="486" width="300" height="44" rx="10" fill="#0F2740" stroke="#14B8A6" stroke-width="2"/>
+  <text x="450" y="514" text-anchor="middle" font-family="Helvetica, Arial, DejaVu Sans, sans-serif"
+        font-size="14" font-weight="600" fill="#99F6E4">score = fuse(cv_conf, weight_fit)</text>
+
+  <line x1="450" y1="530" x2="450" y2="554" stroke="#475569" stroke-width="2"/>
+
+  <!-- Diamond 4 ACCEPT_MIN -->
+  <polygon points="450,554 575,594 450,634 325,594" fill="#1E3A5F" stroke="#38BDF8" stroke-width="2"/>
+  <text x="450" y="590" text-anchor="middle" font-family="Helvetica, Arial, DejaVu Sans, sans-serif"
+        font-size="13" font-weight="700" fill="#E0F2FE">score ≥ ACCEPT_MIN?</text>
+  <text x="450" y="608" text-anchor="middle" font-family="Helvetica, Arial, DejaVu Sans, sans-serif"
+        font-size="11" fill="#7DD3FC">(0.70)</text>
+
+  <!-- no HOLD -->
+  <path d="M325 594 L180 594 L180 630" fill="none" stroke="#D97706" stroke-width="2"/>
+  <text x="240" y="586" font-family="Helvetica, Arial, DejaVu Sans, sans-serif" font-size="11" fill="#FBBF24">no</text>
+  <rect x="70" y="630" width="220" height="40" rx="8" fill="#78350F" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="180" y="655" text-anchor="middle" font-family="Helvetica, Arial, DejaVu Sans, sans-serif"
+        font-size="12" font-weight="600" fill="#FDE68A">HOLD · fusion score too low</text>
+
+  <!-- yes PAY -->
+  <line x1="450" y1="634" x2="450" y2="662" stroke="#16A34A" stroke-width="2.5"/>
+  <text x="468" y="652" font-family="Helvetica, Arial, DejaVu Sans, sans-serif" font-size="11" fill="#86EFAC">yes</text>
+  <rect x="300" y="662" width="300" height="40" rx="10" fill="#14532D" stroke="#22C55E" stroke-width="2"/>
+  <text x="450" y="688" text-anchor="middle" font-family="Helvetica, Arial, DejaVu Sans, sans-serif"
+        font-size="16" font-weight="700" fill="#BBF7D0">PAY 10¢</text>
+</svg>

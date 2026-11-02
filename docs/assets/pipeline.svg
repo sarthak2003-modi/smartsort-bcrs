@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280" role="img"
+     aria-label="SmartSort pipeline: Capture, Classify, Weigh and sense, Fuse and decide, then PAY or HOLD">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1F33"/>
+      <stop offset="100%" stop-color="#102A43"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="280" rx="16" fill="url(#bg)"/>
+  <text x="600" y="36" text-anchor="middle" font-family="Helvetica, Arial, DejaVu Sans, sans-serif"
+        font-size="16" font-weight="600" fill="#94A3B8" letter-spacing="2">SMARTSORT PIPELINE</text>
+
+  <!-- helper for step cards: x positions 40, 250, 460, 670 -->
+  <!-- Step 01 Capture -->
+  <g filter="url(#soft)">
+    <rect x="36" y="60" width="170" height="150" rx="14" fill="#0F2740" stroke="#1E3A5F" stroke-width="1.5"/>
+  </g>
+  <!-- camera icon -->
+  <g transform="translate(91,88)" fill="none" stroke="#14B8A6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="4" y="12" width="50" height="36" rx="6"/>
+    <circle cx="29" cy="30" r="10"/>
+    <path d="M18 12 l6-8 h14 l6 8"/>
+    <circle cx="29" cy="30" r="4" fill="#14B8A6" stroke="none"/>
+  </g>
+  <text x="121" y="168" text-anchor="middle" font-family="Helvetica, Arial, DejaVu Sans, sans-serif"
+        font-size="12" fill="#5EEAD4" font-weight="700">01</text>
+  <text x="121" y="188" text-anchor="middle" font-family="Helvetica, Arial, DejaVu Sans, sans-serif"
+        font-size="16" fill="#F8FAFC" font-weight="700">Capture</text>
+  <text x="121" y="208" text-anchor="middle" font-family="Helvetica, Arial, DejaVu Sans, sans-serif"
+        font-size="11" fill="#94A3B8">Chute camera</text>
+
+  <!-- arrow -->
+  <path d="M216 135 L240 135" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="244,135 234,129 234,141" fill="#14B8A6"/>
+
+  <!-- 02 Classify -->
+  <g filter="url(#soft)">
+    <rect x="250" y="60" width="170" height="150" rx="14" fill="#0F2740" stroke="#1E3A5F" stroke-width="1.5"/>
+  </g>
+  <!-- brain/CNN icon -->
+  <g transform="translate(305,86)" fill="none" stroke="#14B8A6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 48 V36"/>
+    <path d="M12 20 C8 12, 18 4, 28 10 C34 2, 50 4, 50 16 C58 16, 60 28, 52 34 C56 42, 48 50, 38 46 C32 52, 18 50, 16 40 C8 40, 6 28, 12 20 Z"/>
+    <circle cx="28" cy="22" r="2" fill="#14B8A6" stroke="none"/>
+    <circle cx="40" cy="24" r="2" fill="#14B8A6" stroke="none"/>
+    <path d="M28 24 L40 26"/>
+  </g>
+  <text x="335" y="168" text-anchor="middle" font-family="Helvetica, Arial, DejaVu Sans, sans-serif"
+        font-size="12" fill="#5EEAD4" font-weight="700">02</text>
+  <text x="335" y="188" text-anchor="middle" font-family="Helvetica, Arial, DejaVu Sans, sans-serif"
+        font-size="16" fill="#F8FAFC" font-weight="700">Classify</text>
+  <text x="335" y="208" text-anchor="middle" font-family="Helvetica, Arial, DejaVu Sans, sans-serif"
+        font-size="11" fill="#94A3B8">CNN + OCR</text>
+
+  <path d="M430 135 L454 135" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="458,135 448,129 448,141" fill="#14B8A6"/>
+
+  <!-- 03 Weigh -->
+  <g filter="url(#soft)">
+    <rect x="464" y="60" width="170" height="150" rx="14" fill="#0F2740" stroke="#1E3A5F" stroke-width="1.5"/>
+  </g>
+  <!-- scale icon -->
+  <g transform="translate(519,88)" fill="none" stroke="#14B8A6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 18 H52"/>
+    <path d="M30 18 V48"/>
+    <path d="M16 48 H44"/>
+    <path d="M8 18 L16 36 H0 Z" fill="#0F2740"/>
+    <path d="M52 18 L60 36 H44 Z" fill="#0F2740"/>
+    <circle cx="30" cy="18" r="3" fill="#14B8A6" stroke="none"/>
+  </g>
+  <text x="549" y="168" text-anchor="middle" font-family="Helvetica, Arial, DejaVu Sans, sans-serif"
+        font-size="12" fill="#5EEAD4" font-weight="700">03</text>
+  <text x="549" y="188" text-anchor="middle" font-family="Helvetica, Arial, DejaVu Sans, sans-serif"
+        font-size="16" fill="#F8FAFC" font-weight="700">Weigh &amp; sense</text>
+  <text x="549" y="208" text-anchor="middle" font-family="Helvetica, Arial, DejaVu Sans, sans-serif"
+        font-size="11" fill="#94A3B8">Load cell + NIR</text>
+
+  <path d="M644 135 L668 135" stroke="#334155" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="672,135 662,129 662,141" fill="#14B8A6"/>
+
+  <!-- 04 Fuse -->
+  <g filter="url(#soft)">
+    <rect x="678" y="60" width="170" height="150" rx="14" fill="#0F2740" stroke="#1E3A5F" stroke-width="1.5"/>
+  </g>
+  <!-- fusion icon: overlapping circles / nodes -->
+  <g transform="translate(733,90)" fill="none" stroke="#14B8A6" stroke-width="2.5" stroke-linecap="round">
+    <circle cx="18" cy="22" r="14"/>
+    <circle cx="42" cy="22" r="14"/>
+    <circle cx="30" cy="22" r="5" fill="#14B8A6" stroke="none"/>
+    <path d="M30 8 V0 M30 36 V44 M8 22 H0 M52 22 H60" stroke="#5EEAD4" stroke-width="2"/>
+  </g>
+  <text x="763" y="168" text-anchor="middle" font-family="Helvetica, Arial, DejaVu Sans, sans-serif"
+        font-size="12" fill="#5EEAD4" font-weight="700">04</text>
+  <text x="763" y="188" text-anchor="middle" font-family="Helvetica, Arial, DejaVu Sans, sans-serif"
+        font-size="16" fill="#F8FAFC" font-weight="700">Fuse &amp; decide</text>
+  <text x="763" y="208" text-anchor="middle" font-family="Helvetica, Arial, DejaVu Sans, sans-serif"
+        font-size="11" fill="#94A3B8">One score</text>
+
+  <!-- branch lines to PAY / HOLD -->
+  <path d="M848 110 C880 110, 880 95, 900 95" fill="none" stroke="#16A34A" stroke-width="2.5"/>
+  <path d="M848 160 C880 160, 880 185, 900 185" fill="none" stroke="#D97706" stroke-width="2.5"/>
+
+  <!-- PAY -->
+  <g filter="url(#soft)">
+    <rect x="900" y="72" width="250" height="50" rx="12" fill="#14532D" stroke="#22C55E" stroke-width="2"/>
+  </g>
+  <text x="1025" y="103" text-anchor="middle" font-family="Helvetica, Arial, DejaVu Sans, sans-serif"
+        font-size="20" font-weight="700" fill="#BBF7D0">PAY 10¢</text>
+
+  <!-- HOLD -->
+  <g filter="url(#soft)">
+    <rect x="900" y="162" width="250" height="50" rx="12" fill="#78350F" stroke="#F59E0B" stroke-width="2"/>
+  </g>
+  <text x="1025" y="193" text-anchor="middle" font-family="Helvetica, Arial, DejaVu Sans, sans-serif"
+        font-size="20" font-weight="700" fill="#FDE68A">HOLD</text>
+</svg>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="280" viewBox="0 0 1100 280" role="img"
+     aria-label="Design targets: accuracy 95 percent, FPR under 2 percent, FNR under 5 percent, latency under 2 seconds">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0B1F33"/>
+      <stop offset="100%" stop-color="#102A43"/>
+    </linearGradient>
+  </defs>
+  <rect width="1100" height="280" rx="16" fill="url(#bg4)"/>
+  <text x="550" y="36" text-anchor="middle" font-family="Helvetica, Arial, DejaVu Sans, sans-serif"
+        font-size="16" font-weight="600" fill="#94A3B8" letter-spacing="2">DESIGN TARGETS</text>
+  <!-- banner note -->
+  <rect x="300" y="50" width="500" height="28" rx="8" fill="#422006" stroke="#D97706" stroke-width="1.5"/>
+  <text x="550" y="69" text-anchor="middle" font-family="Helvetica, Arial, DejaVu Sans, sans-serif"
+        font-size="13" font-weight="700" fill="#FDE68A">design targets, not measured</text>
+
+  <!-- four metric cards -->
+  <g font-family="Helvetica, Arial, DejaVu Sans, sans-serif">
+    <!-- accuracy -->
+    <rect x="40" y="100" width="240" height="140" rx="14" fill="#102A43" stroke="#1E3A5F" stroke-width="1.5"/>
+    <circle cx="160" cy="145" r="22" fill="#134E4A" stroke="#14B8A6" stroke-width="2"/>
+    <text x="160" y="151" text-anchor="middle" font-size="16" font-weight="700" fill="#5EEAD4">✓</text>
+    <text x="160" y="190" text-anchor="middle" font-size="28" font-weight="700" fill="#F8FAFC">≥ 95%</text>
+    <text x="160" y="218" text-anchor="middle" font-size="13" fill="#94A3B8">Vision accuracy</text>
+
+    <!-- FPR -->
+    <rect x="300" y="100" width="240" height="140" rx="14" fill="#102A43" stroke="#1E3A5F" stroke-width="1.5"/>
+    <circle cx="420" cy="145" r="22" fill="#7F1D1D" stroke="#F87171" stroke-width="2"/>
+    <text x="420" y="151" text-anchor="middle" font-size="14" font-weight="700" fill="#FECACA">FPR</text>
+    <text x="420" y="190" text-anchor="middle" font-size="28" font-weight="700" fill="#F8FAFC">&lt; 2%</text>
+    <text x="420" y="218" text-anchor="middle" font-size="13" fill="#94A3B8">Fraud paid (false +)</text>
+
+    <!-- FNR -->
+    <rect x="560" y="100" width="240" height="140" rx="14" fill="#102A43" stroke="#1E3A5F" stroke-width="1.5"/>
+    <circle cx="680" cy="145" r="22" fill="#78350F" stroke="#FBBF24" stroke-width="2"/>
+    <text x="680" y="151" text-anchor="middle" font-size="14" font-weight="700" fill="#FDE68A">FNR</text>
+    <text x="680" y="190" text-anchor="middle" font-size="28" font-weight="700" fill="#F8FAFC">&lt; 5%</text>
+    <text x="680" y="218" text-anchor="middle" font-size="13" fill="#94A3B8">Valid held (false −)</text>
+
+    <!-- latency -->
+    <rect x="820" y="100" width="240" height="140" rx="14" fill="#102A43" stroke="#1E3A5F" stroke-width="1.5"/>
+    <circle cx="940" cy="145" r="22" fill="#1E3A5F" stroke="#38BDF8" stroke-width="2"/>
+    <text x="940" y="151" text-anchor="middle" font-size="14" font-weight="700" fill="#BAE6FD">ms</text>
+    <text x="940" y="190" text-anchor="middle" font-size="28" font-weight="700" fill="#F8FAFC">&lt; 2 s</text>
+    <text x="940" y="218" text-anchor="middle" font-size="13" fill="#94A3B8">End-to-end latency</text>
+  </g>
+</svg>
